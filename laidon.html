@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="lai"></div>
+    <script>
+        let m = prompt("Nhập số tiền cần gửi: ");
+        let y = prompt("Nhập số năm cần gửi: ");
+        let i = prompt("Nhập % lãi suất: ");
+        let total = document.querySelector(".lai");
+        total.innerHTML = m + m*y*i/100;
+    </script>
+</body>
+</html>
