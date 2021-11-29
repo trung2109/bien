@@ -1,0 +1,36 @@
+<h1>
+    Caculator
+</h1>
+<form>
+    <input type="text" id="a">
+    <input type="text" id="b">   
+</form>
+<form>
+    <input type="button" value="+" id="+" onclick="cong()">
+    <input type="button" value="-" id="-" onclick="tru()">
+    <input type="button" value="*" id="*" onclick="nhan()">
+    <input type="button" value="/" id="/" onclick="chia()">
+</form>
+<div id = "res"></div>
+<script>
+    function cong(){
+        let x=parseInt(document.getElementById("a").value)
+        let y=parseInt(document.getElementById("b").value)
+        document.getElementById("res").innerHTML=x+y
+    }
+    function tru(){
+        let x=parseInt(document.getElementById("a").value)
+        let y=parseInt(document.getElementById("b").value)
+        document.getElementById("res").innerHTML=x-y
+    }
+    function nhan(){
+        let x=parseInt(document.getElementById("a").value)
+        let y=parseInt(document.getElementById("b").value)
+        document.getElementById("res").innerHTML=x*y
+    }
+    function chia(){
+        let x=parseInt(document.getElementById("a").value)
+        let y=parseInt(document.getElementById("b").value)
+        document.getElementById("res").innerHTML=x/y
+    }
+</script>
