@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<input type="text" id="input" placeholder="Nhập số tiền">
+<select id="1">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<select id="2">
+    <option value="USD">USD</option>
+    <option value="VND">VND</option>
+</select>
+<input type="button" value="Convert" onclick="convert()">
+<div id="res"></div>
+<script>
+    function convert(){
+        let x = parseInt(document.getElementById("input").value);
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        if (a == "VND"){
+            if(b == "USD"){
+                document.getElementById("res").innerHTML = x/23000;
+            }
+            else{
+                document.getElementById("res").innerHTML = x;
+            }
+        }
+        if (a == "USD"){
+            if(b == "VND"){
+                document.getElementById("res").innerHTML = x*23000;
+            }
+            else{
+                document.getElementById("res").innerHTML = x;
+            }
+        }
+    }
+</script>
