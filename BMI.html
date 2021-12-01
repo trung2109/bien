@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="text" id="height" placeholder="Nhập chiều cao">
+    <input type="text" id="weight" placeholder="Nhập cân nặng">
+    <input type="button" onclick="bmi()" value="Tính BMI">
+    <script>
+        function bmi(){
+            let a = parseFloat(document.getElementById("height").value);
+            let b = parseFloat(document.getElementById("weight").value);
+            let bmi = b/Math.pow(a,2);
+            switch(true){
+                case (bmi > 40):
+                    document.write("Béo phì độ III");
+                    break;
+                case (bmi >= 35 && bmi < 40):
+                    document.write("Béo phì độ II");
+                    break;
+                case (bmi >= 30 && bmi < 35):
+                    document.write("Béo phì độ I");
+                    break;
+                case (bmi >= 25 && bmi < 30):
+                    document.write("Thừa cân");
+                    break;  
+                case (bmi >= 18.5 && bmi < 25):
+                    document.write("Bình thường");
+                    break;
+                case (bmi >= 17 && bmi < 18.5):
+                    document.write("Gầy độ I");
+                    break;
+                case (bmi >= 16 && bmi < 17):
+                    document.write("Gầy độ II");
+                    break;
+                default:
+                    document.write("Gầy độ III");
+                    break;
+            }
+        }
+    </script>
+</body>``
