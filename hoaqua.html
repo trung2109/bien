@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="text" id="hq" placeholder="Nhập loại quả">
+    <input type="button" onclick="tinh()" value="Xem giá">
+    <script>
+        function tinh(){
+            let hq = document.getElementById("hq").value;
+            switch(hq){
+                case "ổi":
+                    document.write("20000/kg");
+                    break;
+                case "dưa hấu":
+                    document.write("20000/kg");
+                    break;
+                case "táo":
+                    document.write("30000/kg");
+                    break;
+                case "xoài":
+                    document.write("30000/kg");
+                    break;
+                case "cam":
+                    document.write("40000/kg");
+                    break;
+                case "chôm chôm":
+                    document.write("40000/kg");
+                    break;
+                case "măng cụt":
+                    document.write("50000/kg");
+                    break;
+            }
+        }
+    </script>
+</body>
