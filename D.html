@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form>
+        <label>Môn Toán </label>
+        <input type="text" id="math"><br>
+        <label>Môn Văn </label>
+        <input type="text" id="lit"><br>
+        <label>Môn Anh </label>
+        <input type="text" id="eng"><br>
+        <select id="kv">
+            <option>KV1</option>
+            <option>KV2-NT</option>
+            <option>KV2</option>
+            <option>KV3</option>
+        </select>
+        <input type="button" value="Tính điểm" onclick="tinh()">
+    </forn>
+    <script>
+        function tinh(){
+            let kv = document.getElementById("kv").value;
+            let a = parseInt(document.getElementById("math").value);
+            let b = parseInt(document.getElementById("lit").value);
+            let c = parseInt(document.getElementById("eng").value);
+            let d = 0;
+            if (kv == "KV1"){
+                d = 0.75;
+                document.write(a+b+c+d);
+            }
+            else if (kv == "KV2-NT"){
+                d = 0.5;
+                document.write(a+b+c+d);
+            }
+            else if (kv == "KV2"){
+                d = 0.25;
+                document.write(a+b+c+d);
+            }
+            else {
+                document.write(a+b+c);
+            }
+        }
+    </script>
+</body>
