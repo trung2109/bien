@@ -1,0 +1,22 @@
+<script>
+    max = parseInt(prompt("Nhập số lớn nhất"));
+    a = Math.floor(Math.random()*max);
+    let num;
+    let gameover = 1;
+    do{
+        num = parseInt(prompt("Đoán số"));
+        if (num < a){
+            alert("Bé quá");
+        }
+        else if(num > a){
+            alert("Lớn quá");
+        }
+        gameover++;
+    }while(num != a && gameover <= 3)
+    if (gameover > 3){
+        alert("Game over");
+    } 
+    else{
+        alert("Win");
+    }
+</script>
