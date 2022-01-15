@@ -13,7 +13,6 @@ function displayProduct(){
         data += "<td><button onclick='deleteProduct("+ i +")''>Delete</button></td>";
         data += "</tr>";
         }
-    data += "<table>";
     document.getElementById("res").innerHTML = data;
 }
 displayProduct();
